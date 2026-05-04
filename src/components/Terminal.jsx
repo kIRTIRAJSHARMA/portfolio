@@ -4,8 +4,6 @@ import GitHubProjects from "./GitHubProjects";
 import GitHubStats from "./GitHubStats";
 import { handleCommand } from "../utils/commands";
 
-const FULL_NAME = "Kirti Raj Sharma";
-
 function MatrixRain() {
   const canvasRef = useRef(null);
   useEffect(() => {
@@ -34,13 +32,20 @@ function MatrixRain() {
   return <canvas ref={canvasRef} className="matrix-canvas" />;
 }
 
-const ASCII_BANNER = `
-██╗  ██╗██╗██████╗ ████████╗██╗    ██████╗  █████╗      ██╗    ███████╗██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ █████╗ 
-██║ ██╔╝██║██╔══██╗╚══██╔══╝██║    ██╔══██╗██╔══██╗     ██║    ██╔════╝██║  ██║██╔══██╗██╔══██╗████╗ ████║██╔══██╗
-█████╔╝ ██║██████╔╝   ██║   ██║    ██████╔╝███████║     ██║    ███████╗███████║███████║██████╔╝██╔████╔██║███████║
-██╔═██╗ ██║██╔══██╗   ██║   ██║    ██╔══██╗██╔══██║██   ██║    ╚════██║██╔══██║██╔══██║██╔══██╗██║╚██╔╝██║██╔══██║
-██║  ██╗██║██║  ██║   ██║   ██║    ██║  ██║██║  ██║╚█████╔╝    ███████║██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║██║  ██║
-╚═╝  ╚═╝╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝`;
+const ASCII_BANNER =
+`██╗  ██╗██╗██████╗ ████████╗██╗    ██████╗  █████╗      ██╗
+██║ ██╔╝██║██╔══██╗╚══██╔══╝██║    ██╔══██╗██╔══██╗     ██║
+█████╔╝ ██║██████╔╝   ██║   ██║    ██████╔╝███████║     ██║
+██╔═██╗ ██║██╔══██╗   ██║   ██║    ██╔══██╗██╔══██║██   ██║
+██║  ██╗██║██║  ██║   ██║   ██║    ██║  ██║██║  ██║╚█████╔╝
+╚═╝  ╚═╝╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝
+
+███████╗██╗  ██╗ █████╗ ██████╗ ███╗   ███╗ █████╗
+██╔════╝██║  ██║██╔══██╗██╔══██╗████╗ ████║██╔══██╗
+███████╗███████║███████║██████╔╝██╔████╔██║███████║
+╚════██║██╔══██║██╔══██║██╔══██╗██║╚██╔╝██║██╔══██║
+███████║██║  ██║██║  ██║██║  ██║██║ ╚═╝ ██║██║  ██║
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝`;
 
 export default function Terminal() {
   const [bootLines, setBootLines] = useState([]);
@@ -49,13 +54,11 @@ export default function Terminal() {
   const [glitch, setGlitch] = useState(false);
   const bodyRef = useRef(null);
 
-  // auto scroll
   useEffect(() => {
     if (bodyRef.current)
       bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
   }, [bootLines, history]);
 
-  // glitch effect on ascii every few seconds
   useEffect(() => {
     const t = setInterval(() => {
       setGlitch(true);
@@ -64,7 +67,6 @@ export default function Terminal() {
     return () => clearInterval(t);
   }, []);
 
-  // boot sequence
   useEffect(() => {
     const boot = [
       "Initializing system...",
@@ -87,31 +89,19 @@ export default function Terminal() {
     const output = handleCommand(cmd);
     if (output === "__CLEAR__") { setHistory([]); return; }
     if (output === "__BANNER__") {
-      setHistory(prev => [...prev,
-        { type: "input", text: cmd },
-        { type: "banner" }
-      ]);
+      setHistory(prev => [...prev, { type: "input", text: cmd }, { type: "banner" }]);
       return;
     }
     if (output === "__STATS__") {
-      setHistory(prev => [...prev,
-        { type: "input", text: cmd },
-        { type: "stats" }
-      ]);
+      setHistory(prev => [...prev, { type: "input", text: cmd }, { type: "stats" }]);
       return;
     }
     if (output === "__RESUME__") {
-      setHistory(prev => [...prev,
-        { type: "input", text: cmd },
-        { type: "resume" }
-      ]);
+      setHistory(prev => [...prev, { type: "input", text: cmd }, { type: "resume" }]);
       return;
     }
     if (output === "__PROJECTS__") {
-      setHistory(prev => [...prev,
-        { type: "input", text: cmd },
-        { type: "projects" }
-      ]);
+      setHistory(prev => [...prev, { type: "input", text: cmd }, { type: "projects" }]);
       return;
     }
     setHistory(prev => [...prev,
@@ -149,7 +139,7 @@ export default function Terminal() {
               </div>
               <div className="hero-text">
                 <pre className={`ascii${glitch ? " glitch" : ""}`}>{ASCII_BANNER}</pre>
-                <p className="blue">Android Developer • Builder • Open to opportunities</p>
+                <p className="blue">Developer • Builder • Open to opportunities</p>
                 <p className="dim">Portfolio OS v2.5.1</p>
                 <div className="social-links">
                   <a href="https://github.com/kIRTIRAJSHARMA" target="_blank" rel="noreferrer" className="social-btn">

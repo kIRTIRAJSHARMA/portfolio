@@ -39,21 +39,44 @@ export function handleCommand(cmd) {
 
     case "about":
       return `
-Hey, I'm Kirti Raj Sharma 👨💻
+┌──────────────────────────────────────────────────┐
+│              Hey, I'm Kirti Raj Sharma 👨💻        │
+└──────────────────────────────────────────────────┘
 
-🚀 Android Developer | Problem Solver | Builder
-📍 Andhra Pradesh, India
+  🚀  Developer  |  Problem Solver  |  Builder
+  📍  Bhubaneswar, India
 
-I build real-world Android applications that solve meaningful problems.
-Passionate about Kotlin, Jetpack Compose, Firebase & clean UI experiences.
-Currently pursuing B.Tech CSE and open to internships & full-time opportunities.`;
+  I build applications that solve real-world problems
+  and focus on creating clean, user-friendly experiences.
+
+  I enjoy turning ideas into functional products, with a
+  strong focus on simplicity, performance, and usability.
+  I primarily work with Kotlin, Jetpack Compose, Firebase,
+  and modern development tools.
+
+  Currently pursuing B.Tech in CSE, I'm actively looking
+  for opportunities where I can learn, contribute, and grow
+  by building impactful solutions.
+
+  ──────────────────────────────────────────────────
+  💡 Type 'skills' to see what I work with
+  📁 Type 'projects' to see what I've built
+  📬 Type 'contact' to reach out
+  ──────────────────────────────────────────────────`;
 
     case "whoami":
       return `
-Kirti Raj Sharma 🚀
-Android Developer | Builder | Tech Enthusiast
-📍 Andhra Pradesh, India
-📧 kirtirajsharma618@gmail.com`;
+  ╔══════════════════════════════════════╗
+  ║        IDENTITY CONFIRMED  ✅        ║
+  ╚══════════════════════════════════════╝
+
+  Name     →  Kirti Raj Sharma
+  Role     →  Developer | Builder | Problem Solver
+  Location →  Bhubaneswar, India 📍
+  Email    →  kirtirajsharma618@gmail.com
+  Phone    →  +91 8252375816
+  GitHub   →  github.com/kIRTIRAJSHARMA
+  Status   →  Open to opportunities 🟢`;
 
     case "skills":
       return `
@@ -72,46 +95,61 @@ Android Developer | Builder | Tech Enthusiast
 
     case "experience":
       return `
-💼 Experience:
+  ╔══════════════════════════════════════════════════════════╗
+  ║                  💼  EXPERIENCE                       ║
+  ╚══════════════════════════════════════════════════════════╝
 
-  PARK360 · Software Developer Intern
-  May 2025 – Jul 2025 · 3 mos · Surat, Gujarat (On-site)
-  → Android development using Kotlin, Jetpack, Firebase
-  → Android SDK, Testing, Application Development
+  🟢 PARK360  ·  Software Developer Intern
+  ├─ Duration  : May 2025 – Jul 2025 · 2 months
+  ├─ Location  : Surat, Gujarat (On-site)
+  ├─ Android development using Kotlin, Jetpack, Firebase
+  └─ SDK integration, testing & app deployment
 
-  ALQUILAR HIVE LLP · Android Developer Intern
-  May 2024 – Jun 2024 · 2 mos · New Delhi (Remote)
-  → Android Development, Kotlin, Firebase, Android Studio
-  → UI design, SDK integration, testing
+  ──────────────────────────────────────────────────────────
 
-  Google Developer Groups on Campus - CVRGU
-  → Android Development Domain Lead
-    Oct 2025 – Present · 8 mos
-  → Android Development Core Organizer
-    Sep 2024 – Oct 2025 · 1 yr 2 mos
+  🟢 ALQUILAR HIVE LLP  ·  Android Developer Intern
+  ├─ Duration  : May 2024 – Jun 2024 · 1 month
+  ├─ Location  : New Delhi (Remote)
+  ├─ Android Development with Kotlin & Firebase
+  └─ UI design, SDK integration & testing
 
-  Institution's Innovation Council - CGU
-  → Vice President
-    Jul 2025 – Present · 11 mos
-  → Management
-    Nov 2024 – Jul 2025 · 9 mos
+  ──────────────────────────────────────────────────────────
 
-  Entrepreneurship Development Cell - CGU
-  → Student Body Convener
-    Jan 2025 – Oct 2025 · 10 mos
+  🟡 LEADERSHIP & COMMUNITY
 
-  CSE@CGU-Odisha
-  → Joint Secretary
-    Oct 2025 – Present · 8 mos`;
+  ├─ GDG on Campus — CVRGU
+  │   ├─ Android Dev Domain Lead    · Oct 2025 – Present
+  │   └─ Android Dev Core Organizer  · Sep 2024 – Oct 2025
+  │
+  ├─ Institution's Innovation Council — CGU
+  │   ├─ Vice President   · Jul 2025 – Present
+  │   └─ Management       · Nov 2024 – Jul 2025
+  │
+  ├─ Entrepreneurship Development Cell — CGU
+  │   └─ Student Body Convener  · Jan 2025 – Present
+  │
+  └─ CSE@CGU-Odisha
+      └─ Joint Secretary  · Oct 2025 – Present`;
 
     case "education":
       return `
-🎓 Education:
+  ╔══════════════════════════════════════════════════════════╗
+  ║                    🎓  EDUCATION                        ║
+  ╚══════════════════════════════════════════════════════════╝
 
-  B.Tech — Computer Science & Engineering
-  CVR College of Engineering, Hyderabad
-  → Currently pursuing (2023 – 2027)
-  → Relevant: DSA, OS, DBMS, Networks, OOP, AI/ML`;
+  Degree   →  B.Tech — Computer Science & Engineering
+  College  →  C.V. Raman Global University, Bhubaneswar
+  Duration →  2023 – 2027  (Currently pursuing)
+
+  Relevant Coursework:
+  ├── Data Structures & Algorithms
+  ├── Operating Systems
+  ├── Database Management Systems
+  ├── Computer Networks
+  ├── Object Oriented Programming
+  └── Artificial Intelligence & ML`;
+
+  
 
     case "certifications":
       return `
@@ -149,11 +187,20 @@ Android Developer | Builder | Tech Enthusiast
 
     case "contact":
       return `
-📬 Contact:
+  ╔══════════════════════════════════════════════════════════╗
+  ║                   📬  GET IN TOUCH                      ║
+  ╚══════════════════════════════════════════════════════════╝
 
-  Email    → kirtirajsharma618@gmail.com
-  GitHub   → https://github.com/kIRTIRAJSHARMA
-  LinkedIn → https://www.linkedin.com/in/kirti-raj-sharma-a619572ab/`;
+  📧  Email     →  kirtirajsharma618@gmail.com
+  📱  Phone     →  +91 8252375816
+  🐙  GitHub    →  https://github.com/kIRTIRAJSHARMA
+  💼  LinkedIn  →  https://www.linkedin.com/in/kirti-raj-sharma-a619572ab/
+  📍  Location  →  Bhubaneswar, India
+
+  ──────────────────────────────────────────────────────────
+  I'm always open to interesting projects and opportunities.
+  Don't hesitate to reach out — I don't bite 😄
+  ──────────────────────────────────────────────────────────`;
 
     case "github":
       return `
@@ -189,18 +236,23 @@ Type "open linkedin" to open it in browser.`;
 
     case "neofetch":
       return `
-        .          kirti@portfolio
-       .#.          ───────────────
-      .###.         OS      : Portfolio OS v2.5.1
-     .#####.        Shell   : zsh 5.9
-    .#######.       Theme   : Matrix Green
-   .#########.      Lang    : Kotlin / Java / JS
-  .###########.     Tools   : Android Studio, VS Code
- .#############.    GitHub  : kIRTIRAJSHARMA
-  #############     College : CVR College of Engineering
-   ###########      Uptime  : Always building 🚀
-    #########       Memory  : Infinite ideas
-     #######        CPU     : Powered by caffeine ☕`;
+  ██╗  ██╗██████╗ ███████╗
+  ██║ ██╔╝██╔══██╗██╔════╝      kirti@portfolio
+  █████╔╝ ██████╔╝███████╗      ───────────────────────────────
+  ██╔═██╗ ██╔══██╗╚════██║      OS       Portfolio OS v2.5.1 🖥️
+  ██║  ██╗██║  ██║███████║      Shell    zsh 5.9
+  ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝      Theme    Matrix Green 🟩
+                                 Role     Developer & Builder
+                                 Stack    Kotlin · Firebase · React
+                                 Tools    Android Studio · VS Code
+                                 College  C.V. Raman Global University
+                                 GitHub   kIRTIRAJSHARMA
+                                 Status   Always building 🚀
+                                 Memory   Infinite ideas 💡
+                                 CPU      Caffeine-powered ☕
+                                 Uptime   Since day 1 of college
+
+  🟥🟧🟨🟩🟦🟪  Colors: Matrix Edition`;
 
     case "stats":
       return `__STATS__`;
@@ -225,13 +277,23 @@ Type "open linkedin" to open it in browser.`;
 
     case "sudo hire-me":
       return `
-🔐 Authenticating...
-██████████ 100%
+  🔐 Authenticating credentials...
 
-✅ Access Granted!
+  ██░░░░░░░░  10%  — Checking skills...
+  ████░░░░░░  40%  — Verifying projects...
+  ██████░░░░  60%  — Reviewing experience...
+  ████████░░  80%  — Analyzing potential...
+  ██████████  100% — Decision made.
 
-💼 Congratulations! You just hired the best developer 😎
-📧 Reach out: kirtirajsharma618@gmail.com`;
+  ╔══════════════════════════════════════╗
+  ║       ✅  ACCESS GRANTED             ║
+  ║   You just hired the best dev 😎     ║
+  ╚══════════════════════════════════════╝
+
+  📧  kirtirajsharma618@gmail.com
+  📱  +91 8252375816
+
+  Looking forward to building something great together! 🚀`;
 
     case "hack":
       return `
