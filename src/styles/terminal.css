@@ -511,24 +511,88 @@ input:focus { border-bottom-color: #00ff9f88; }
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
-  .terminal-wrapper { padding: 0; }
+  .terminal-wrapper {
+    padding: 0;
+    align-items: stretch;
+  }
 
   .terminal-box {
     border-radius: 0;
     border-left: none;
     border-right: none;
     min-height: 100vh;
+    width: 100%;
   }
 
-  .terminal-body { padding: 16px 14px; max-height: none; }
+  .terminal-body {
+    padding: 14px 12px;
+    max-height: none;
+    overflow-y: visible;
+  }
 
-  .hero { flex-direction: column; align-items: flex-start; gap: 16px; }
+  /* HERO — stack avatar on top of text */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+  }
 
-  .ascii { font-size: 7px; }
+  .hero-text {
+    align-items: center;
+    width: 100%;
+  }
 
-  .typed-name { font-size: 18px; }
+  /* ASCII — scale down to fit screen */
+  .ascii {
+    font-size: 4.2px;
+    line-height: 1.15;
+    overflow-x: auto;
+    display: block;
+    white-space: pre;
+  }
 
-  .stats-output { flex-direction: column; }
+  /* AVATAR */
+  .avatar-wrap { width: 90px; height: 90px; }
+  .avatar-img  { width: 90px; height: 90px; }
 
-  .contrib-img { min-width: 500px; }
+  .blue { font-size: 12px; }
+  .dim  { font-size: 11px; }
+
+  /* SOCIAL BUTTONS */
+  .social-links { justify-content: center; }
+
+  /* CONTRIBUTION GRAPH — allow horizontal scroll */
+  .contrib-graph { padding: 10px; }
+  .contrib-img { min-width: 480px; }
+
+  /* COMMAND OUTPUT */
+  .cmd-output {
+    font-size: 11px;
+    padding: 8px 10px;
+    word-break: break-word;
+  }
+
+  .cmd-input { font-size: 12px; }
+  .prompt    { font-size: 12px; }
+
+  /* PROJECTS GRID — single column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STATS GRID — single column */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* RESUME IFRAME */
+  .resume-frame { height: 420px; }
+
+  /* INPUT */
+  input { font-size: 13px; }
+
+  /* HEADER */
+  .terminal-header { padding: 8px 12px; }
+  .title { font-size: 11px; }
 }
