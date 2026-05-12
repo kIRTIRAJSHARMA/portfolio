@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-> Coming soon — deploy link here
+(https://kirtirajsharma-portfolio.netlify.app/)
 
 ---
 
